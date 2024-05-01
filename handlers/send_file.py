@@ -25,7 +25,7 @@ async def reply_forward(message: Message, file_id: int):
 
 async def media_forward(bot: Client, user_id: int, file_id: int):
     try:
-        if Config.FORWARD_AS_COPY is False:
+        if Config.FORWARD_AS_COPY is True:
                 lazy_file = await bot.copy_message(chat_id=STREAM_LOGS, from_chat_id=Config.DB_CHANNEL,
                                           message_id=file_id)
 
