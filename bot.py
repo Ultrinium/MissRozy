@@ -121,11 +121,11 @@ async def Lazy_start():
                             InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
                         ],
                         [
-                            InlineKeyboardButton("🤖Aß⊕ut ß⊕†", callback_data="aboutbot"),
-                            InlineKeyboardButton("♥️Aß⊕ut Đ€V", callback_data="aboutdevs")
+                            InlineKeyboardButton("About Bot", callback_data="aboutbot"),
+                            InlineKeyboardButton("About Dev", callback_data="aboutdevs")
                         ],
                         [
-                            InlineKeyboardButton("⎝⎝✧✧ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ✧✧⎠⎠", url="https://youtu.be/Rtjyz3lEZwE")
+                            InlineKeyboardButton("Courses Channel", url="https://t.me/course_guy")
                         ]]))
             else :
                 await cmd.reply_photo(photo=lazy_pic,
@@ -137,8 +137,8 @@ async def Lazy_start():
                             InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
                         ],
                         [
-                            InlineKeyboardButton("🤖Aß⊕ut ß⊕†", callback_data="aboutbot"),
-                            InlineKeyboardButton("♥️Aß⊕ut Đ€V", callback_data="aboutdevs")
+                            InlineKeyboardButton("About Bot", callback_data="aboutbot"),
+                            InlineKeyboardButton("About Dev", callback_data="aboutdevs")
                         ],
                         [
                             InlineKeyboardButton("Courses Channel", url="https://t.me/course_guy")
