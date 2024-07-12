@@ -116,32 +116,32 @@ async def Lazy_start():
                 caption=Config.LAZY_HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id),
                 reply_markup=InlineKeyboardMarkup(
                     [
+                      #  [
+                     #       InlineKeyboardButton("🍿suppor† group", url="https://t.me/codeconvo"),
+                    #        InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
+                   #     ],
+                  #      [
+                 #           InlineKeyboardButton("About Bot", callback_data="aboutbot"),
+                #            InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+               #         ],
                         [
-                            InlineKeyboardButton("🍿suppor† group", url="https://t.me/codeconvo"),
-                            InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
-                        ],
-                        [
-                            InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                            InlineKeyboardButton("About Dev", callback_data="aboutdevs")
-                        ],
-                        [
-                            InlineKeyboardButton("Courses Channel", url="https://t.me/course_guy")
+                            InlineKeyboardButton("Main Channel", url="https://t.me/kdrama_girl")
                         ]]))
             else :
                 await cmd.reply_photo(photo=lazy_pic,
                 caption=Config.HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id),
                 reply_markup=InlineKeyboardMarkup(
                     [
+                        #[
+                       #     InlineKeyboardButton("🍿suppor† group", url="https://t.me/codeconvo"),
+                      #      InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
+                     #   ]
+                    #    [
+                   #         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
+                  #          InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                 #       ],
                         [
-                            InlineKeyboardButton("🍿suppor† group", url="https://t.me/codeconvo"),
-                            InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
-                        ],
-                        [
-                            InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                            InlineKeyboardButton("About Dev", callback_data="aboutdevs")
-                        ],
-                        [
-                            InlineKeyboardButton("Courses Channel", url="https://t.me/course_guy")
+                            InlineKeyboardButton("Main Channel", url="https://t.me/kdrama_girl")
                         ]]))
             
         else:
@@ -376,13 +376,12 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Courses Channel",
-                                                url="https://t.me/course_guy")
-                        ],
-                        [
-                            InlineKeyboardButton("Go Home", callback_data="gotohome"),
-                            InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                            InlineKeyboardButton("Main Channel", url="https://t.me/kdrama_girl")
                         ]
+                    #    [
+                     #       InlineKeyboardButton("Go Home", callback_data="gotohome"),
+                      #      InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                       # ]
                     ]
                 )
             )
@@ -394,13 +393,12 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Courses Channel",
-                                                url="https://t.me/course_guy")
-                        ],
-                        [
-                            InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                            InlineKeyboardButton("Go Home", callback_data="gotohome")
+                            InlineKeyboardButton("Main Channel", url="https://t.me/kdrama_girl")
                         ]
+                        #[
+                          #  InlineKeyboardButton("About Bot", callback_data="aboutbot"),
+                         #   InlineKeyboardButton("Go Home", callback_data="gotohome")
+                        #]
                     ]
                 )
             )
@@ -413,15 +411,15 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🍿suppor† group", url="https://t.me/codeconvo"),
-                            InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
-                        ],
+                       #     InlineKeyboardButton("🍿suppor† group", url="https://t.me/codeconvo"),
+                      #      InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
+                     #   ],
+                    #    [
+                   #         InlineKeyboardButton("About bot", callback_data="aboutbot"),
+                  #          InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                 #       ],
                         [
-                            InlineKeyboardButton("About bot", callback_data="aboutbot"),
-                            InlineKeyboardButton("About Dev", callback_data="aboutdevs")
-                        ],
-                        [
-                            InlineKeyboardButton("Courses Channel", url="https://t.me/course_guy")
+                            InlineKeyboardButton("Main Channel", url="https://t.me/kdrama_girl")
                         ]
                     ]
                 )
@@ -433,15 +431,15 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🍿suppor† group", url="https://t.me/codeconvo"),
-                            InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
-                        ],
+                          #  InlineKeyboardButton("🍿suppor† group", url="https://t.me/codeconvo"),
+                         #   InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
+                        #],
+                       # [
+                      #      InlineKeyboardButton("About Dev", callback_data="aboutbot"),
+                     #       InlineKeyboardButton("About Bot", callback_data="aboutdevs")
+                    #    ],
                         [
-                            InlineKeyboardButton("About Dev", callback_data="aboutbot"),
-                            InlineKeyboardButton("About Bot", callback_data="aboutdevs")
-                        ],
-                        [
-                            InlineKeyboardButton("Courses Channel", url="https://t.me/course_guy")
+                            InlineKeyboardButton("Main Channel", url="https://t.me/kdrama_girl")
                         ]
                     ]
                 )
@@ -457,7 +455,7 @@ async def Lazy_start():
                     user = await bot.get_chat_member(channel_chat_id, cmd.message.chat.id)
                     if user.status == "kicked":
                         await cmd.message.edit(
-                            text="ꜱᴏʀʀʏ ꜱɪʀ, ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜꜱᴇ ᴍᴇ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [Support Group](https://t.me/kdrama_girlchat).",
+                            text="ꜱᴏʀʀʏ Sir/Mam, ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜꜱᴇ ᴍᴇ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [Support Group](https://t.me/kdrama_girlchat).",
                             disable_web_page_preview=True
                         )
                         return
@@ -490,14 +488,14 @@ async def Lazy_start():
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [
-                            InlineKeyboardButton("🍿suppor† group", url="https://t.me/codeconvo"),
-                            InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
-                        ],
-                        [
-                            InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                            InlineKeyboardButton("About Bot", callback_data="aboutdevs")
-                        ],
+                    #    [
+                    #        InlineKeyboardButton("🍿suppor† group", url="https://t.me/codeconvo"),
+                    #        InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
+                    #    ],
+                    #    [
+                    #        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
+                    #        InlineKeyboardButton("About Bot", callback_data="aboutdevs")
+                    #    ],
                         [
                             InlineKeyboardButton("Main Channel", url="https://t.me/kdrama_girl")
                         ]
@@ -511,15 +509,15 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🍿suppor† group", url="https://t.me/codeconvo"),
-                            InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
-                        ],
+                   #         InlineKeyboardButton("🍿suppor† group", url="https://t.me/codeconvo"),
+                  #          InlineKeyboardButton("🔊Books channel", url="https://t.me/books_groupp")
+                 #       ],
+                 #       [
+                 #           InlineKeyboardButton("About Bot", callback_data="aboutbot"),
+                 #           InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                 #       ],
                         [
-                            InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                            InlineKeyboardButton("About Dev", callback_data="aboutdevs")
-                        ],
-                        [
-                            InlineKeyboardButton("Courses Channel", url="https://t.me/course_guy")
+                            InlineKeyboardButton("Main Channel", url="https://t.me/kdrama_girl")
                         ]
                     ]
                 )
@@ -528,7 +526,7 @@ async def Lazy_start():
         elif cb_data.startswith("ban_user_"):
             user_id = cb_data.split("_", 2)[-1]
             if Config.UPDATES_CHANNEL is None:
-                await cmd.answer("ꜱᴏʀʀʏ ꜱɪʀ, ʏᴏᴜ ᴅɪᴅɴ'ᴛ ꜱᴇᴛ ᴀɴʏ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ!", show_alert=True)
+                await cmd.answer("ꜱᴏʀʀʏ Sir/Mam, ʏᴏᴜ ᴅɪᴅɴ'ᴛ ꜱᴇᴛ ᴀɴʏ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ!", show_alert=True)
                 return
             if not int(cmd.from_user.id) == Config.BOT_OWNER:
                 await cmd.answer("ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ!", show_alert=True)
@@ -557,18 +555,20 @@ async def Lazy_start():
                 await xo.delete()
 
                 await lazy_file.reply_text(
-                    text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
+                    text=f"•• Link generated for ID #{user_id} \n•• Username : {username} \n\n•• File Name : {fileName}",
                     quote=True,
                     disable_web_page_preview=True,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("web Download", url=lazy_download),  # we download Link
-                                                        InlineKeyboardButton('▶Stream online', url=lazy_stream)]])  # web stream Link
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Main Channel", url="https://t.me/kdrama_girl")  # we download Link
+                                                       # InlineKeyboardButton('▶Stream online', url=lazy_stream)
+                                                       ]])  # web stream Link
                 )
                 await cmd.message.edit(
                     text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
                     quote=True,
                     disable_web_page_preview=True,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("web Download", url=lazy_download),  # we download Link
-                                                        InlineKeyboardButton('▶Stream online', url=lazy_stream)]])  # web stream Link
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Main Channel", url="https://t.me/kdrama_girl")  # we download Link
+                                                        #InlineKeyboardButton('▶Stream online', url=lazy_stream)
+                                                       ]])  # web stream Link
                 )
             except Exception as e:
                 print(e)  # print the error message
@@ -584,7 +584,7 @@ async def Lazy_start():
             await cmd.message.edit("ꜰɪʟᴇ ꜱᴀᴠᴇᴅ ɪɴ ʙᴀᴛᴄʜ!\n\n"
                                 "ᴘʀᴇꜱꜱ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʙᴀᴛᴄʜ ʟɪɴᴋ.",
                                 reply_markup=InlineKeyboardMarkup([
-                                    [InlineKeyboardButton("⚡️ ɢᴇᴛ ʙᴀᴛᴄʜ & ᴘᴏꜱᴛ ⚡️", callback_data="getBatchLink")],
+                                    [InlineKeyboardButton("ɢᴇᴛ ʙᴀᴛᴄʜ & ᴘᴏꜱᴛ", callback_data="getBatchLink")],
                                     [InlineKeyboardButton("Close Message", callback_data="closeMessage")]
                                 ]))
 
