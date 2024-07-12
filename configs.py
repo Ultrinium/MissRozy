@@ -62,8 +62,8 @@ class Config(object):
 
 	ABOUT_BOT_TEXT = f"""Books Store bot. Just click on the link provided by our channel and get your book free of cost."""
 	ABOUT_DEV_TEXT = f"""<b>Make sure to share our channel</b>"""
-	LAZY_HOME_TEXT = """Please don't store any file in the uneless you're an admin of Book.org. Otherwise I have to Ban you from using the bot."""
-	HOME_TEXT = """Please don't store any file in the uneless you're an admin of Book.org. Otherwise I have to Ban you from using the bot."""
+	LAZY_HOME_TEXT = """A Simple files Store Bot, We usually store Kdrama Series and Movies, If you need any movie/series request here @kdrama_girlchat"""
+	HOME_TEXT = """A Simple files Store Bot, We usually store Kdrama Series and Movies, If you need any movie/series request here @kdrama_girlchat"""
 
 
 
