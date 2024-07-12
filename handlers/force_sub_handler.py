@@ -32,7 +32,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=cmd.from_user.id,
-                text="Sorry Sir/Mam, You are Banned to use me. Contact my [Support Group](https://t.me/codeconvo).",
+                text="Sorry Sir/Mam, You are Banned to use me. Contact my [Support Group](https://t.me/kdrama_girlchat).",
                 disable_web_page_preview=True
             )
             return 400
@@ -49,7 +49,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ", url=invite_link.invite_link)
+                        InlineKeyboardButton("Main Channel", url=invite_link.invite_link)
                     ],
                     [
                         InlineKeyboardButton("🔄 ʀᴇꜰʀᴇꜱʜ 🔄", callback_data="refreshForceSub")
@@ -61,7 +61,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
     except Exception:
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="Join our discussion group, You can also Request Books also. [Discussion Group](https://t.me/codeconvo).",
+            text="Join our discussion group, You can also Request for series. [Discussion Group](https://t.me/kdrama_girlchat).",
             disable_web_page_preview=True
         )
         return 200
