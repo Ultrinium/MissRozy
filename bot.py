@@ -519,7 +519,7 @@ async def Lazy_start():
                         [
                             InlineKeyboardButton("Main Channel", url="https://t.me/kdrama_girl")
                         ]
-                    ]
+                    ]]
                 )
             )
 
