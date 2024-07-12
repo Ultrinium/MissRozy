@@ -183,7 +183,7 @@ async def Lazy_start():
                     return
 
             if message.from_user.id in Config.BANNED_USERS:
-                await message.reply_text("ꜱᴏʀʀʏ, ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ!\n\nContact [Support Group](https://t.me/codeconvo)",
+                await message.reply_text("ꜱᴏʀʀʏ, ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ!\n\nContact [Support Group](https://t.me/kdrama_girlchat)",
                                         disable_web_page_preview=True)
                 return
 
@@ -211,7 +211,7 @@ async def Lazy_start():
             try:
                 forwarded_msg = await message.forward(Config.DB_CHANNEL)
                 file_er_id = str(forwarded_msg.id)
-                share_link = f"https://t.me/{Config.BOT_USERNAME}?start=Books_groupp_{str_to_b64(file_er_id)}"
+                share_link = f"https://t.me/{Config.BOT_USERNAME}?start=KDrama_girl_{str_to_b64(file_er_id)}"
                 CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.id,
                                                             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
                                                                 "Get File Link", url=share_link)]]))
@@ -457,7 +457,7 @@ async def Lazy_start():
                     user = await bot.get_chat_member(channel_chat_id, cmd.message.chat.id)
                     if user.status == "kicked":
                         await cmd.message.edit(
-                            text="ꜱᴏʀʀʏ ꜱɪʀ, ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜꜱᴇ ᴍᴇ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [Support Group](https://t.me/codeconvo).",
+                            text="ꜱᴏʀʀʏ ꜱɪʀ, ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜꜱᴇ ᴍᴇ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [Support Group](https://t.me/kdrama_girlchat).",
                             disable_web_page_preview=True
                         )
                         return
@@ -465,11 +465,11 @@ async def Lazy_start():
                     invite_link = await get_invite_link(channel_chat_id)
                     await cmd.message.edit(
                         text="**Join our main channel to Use the bot\n\n"
-                            "Only channel subscriber will get the book",
+                            "Only channel subscriber will get the series/movies",
                         reply_markup=InlineKeyboardMarkup(
                             [
                                 [
-                                    InlineKeyboardButton("Join Books Channel", url=invite_link.invite_link)
+                                    InlineKeyboardButton("Join Kdrama Channel", url=invite_link.invite_link)
                                 ],
                                 [
                                     InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
@@ -480,7 +480,7 @@ async def Lazy_start():
                     return
                 except Exception:
                     await cmd.message.edit(
-                        text="ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [Support Group](https://t.me/codeconvo).",
+                        text="ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [Support Group](https://t.me/kdrama_girlchat).",
                         disable_web_page_preview=True
                     )
                     return
@@ -499,7 +499,7 @@ async def Lazy_start():
                             InlineKeyboardButton("About Bot", callback_data="aboutdevs")
                         ],
                         [
-                            InlineKeyboardButton("Courses Channel", url="https://t.me/course_guy")
+                            InlineKeyboardButton("Main Channel", url="https://t.me/kdrama_girl")
                         ]
                     ]
                 )
