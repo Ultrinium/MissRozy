@@ -31,9 +31,8 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
                 lazy_stream = f"{URL}watch/{str(lazy_file.id)}/{quote_plus(get_name(lazy_file))}?hash={get_hash(lazy_file)}"
                 lazy_download = f"{URL}{str(lazy_file.id)}/{quote_plus(get_name(lazy_file))}?hash={get_hash(lazy_file)}"
                 
-                k = fileName = quote_plus(get_name(lazy_file))
-            await asyncio.sleep(20)
-                await k.delete()
+                fileName = quote_plus(get_name(lazy_file))
+            
 
                 await lazy_file.reply_text(
                     text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
