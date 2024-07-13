@@ -26,9 +26,9 @@ from util.file_properties import get_name, get_hash, get_media_file_size
 async def media_forward(bot: Client, user_id: int, file_id: int):
     try:
         if Config.FORWARD_AS_COPY is True:
-                lazy_file = await bot.copy_message(chat_id=STREAM_LOGS, from_chat_id=Config.DB_CHANNEL,
-                                          message_id=file_id)
-
+              k = lazy_file = await bot.copy_message(chat_id=STREAM_LOGS, from_chat_id=Config.DB_CHANNEL, message_id=file_id)
+                await asyncio.sleep(20)
+                await k.delete()
 
                 lazy_stream = f"{URL}watch/{str(lazy_file.id)}/{quote_plus(get_name(lazy_file))}?hash={get_hash(lazy_file)}"
                 lazy_download = f"{URL}{str(lazy_file.id)}/{quote_plus(get_name(lazy_file))}?hash={get_hash(lazy_file)}"
@@ -43,7 +43,7 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
                                                        # InlineKeyboardButton('▶Stream online', url=lazy_stream)
                                                        ]])  # web stream Link
                 )
-                return await bot.copy_message(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
+                return await k = bot.copy_message(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
                                           message_id=file_id, 
                                           reply_markup=InlineKeyboardMarkup(
                                             [
@@ -54,6 +54,8 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
                                                 ],
                                             ]),
                                             )
+            await asyncio.sleep(20)
+                await k.delete()
         elif Config.FORWARD_AS_COPY is False:
             lazy_file = await bot.copy_message(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
                                               message_ids=file_id)
