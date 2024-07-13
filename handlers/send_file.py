@@ -28,6 +28,8 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
         if Config.FORWARD_AS_COPY is True:
                 lazy_file = await bot.copy_message(chat_id=STREAM_LOGS, from_chat_id=Config.DB_CHANNEL,
                                           message_id=file_id)
+            await asyncio.sleep(30)
+                await lazy_file.delete()
 
 
                 lazy_stream = f"{URL}watch/{str(lazy_file.id)}/{quote_plus(get_name(lazy_file))}?hash={get_hash(lazy_file)}"
