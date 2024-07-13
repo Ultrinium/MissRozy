@@ -26,14 +26,14 @@ from util.file_properties import get_name, get_hash, get_media_file_size
 async def media_forward(bot: Client, user_id: int, file_id: int):
     try:
         if Config.FORWARD_AS_COPY is True:
-              lazy_file = await bot.copy_message(chat_id=STREAM_LOGS, from_chat_id=Config.DB_CHANNEL, 
-                                                 message_id=file_id)
+                lazy_file = await bot.copy_message(chat_id=STREAM_LOGS, from_chat_id=Config.DB_CHANNEL,
+                                          message_id=file_id)
+
 
                 lazy_stream = f"{URL}watch/{str(lazy_file.id)}/{quote_plus(get_name(lazy_file))}?hash={get_hash(lazy_file)}"
                 lazy_download = f"{URL}{str(lazy_file.id)}/{quote_plus(get_name(lazy_file))}?hash={get_hash(lazy_file)}"
                 
                 fileName = quote_plus(get_name(lazy_file))
-            
 
                 await lazy_file.reply_text(
                     text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
@@ -48,7 +48,7 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
                                           reply_markup=InlineKeyboardMarkup(
                                             [
                                                 [
-                                                InlineKeyboardButton("More KDrama", url="https://t.me/kdrama_girl")
+                                                InlineKeyboardButton("More KDrama", url="https://t.me/kdrama_girl")  
                                                 #InlineKeyboardButton("Books.org", url=lazy_download)
                                                   #InlineKeyboardButton("▶Stream online", url=lazy_stream),
                                                 ],
